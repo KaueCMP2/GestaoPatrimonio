@@ -1,0 +1,1271 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: GerenciarPatrimonio
+meta:
+  id: wrk_d51656f477154961b6b135a8ae5fd1af
+  created: 1779710419099
+  modified: 1779710419099
+  description: ""
+collection:
+  - name: Area
+    meta:
+      id: fld_0cf6b7f962e54f18baffeba6fb57f75f
+      created: 1774526684845
+      modified: 1774955678526
+      sortKey: -1774955310641
+      description: ""
+    children:
+      - url: https://localhost:7063/api/Area
+        name: Listar
+        meta:
+          id: req_b962f90299714f8f83d85f23b694779f
+          created: 1774526670245
+          modified: 1779710423664
+          isPrivate: false
+          description: ""
+          sortKey: -1774954999583
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7063/api/Area
+        name: Adicionar
+        meta:
+          id: req_60ffedd0366b43c0a848307a10c0276a
+          created: 1774526813490
+          modified: 1779710434420
+          isPrivate: false
+          description: ""
+          sortKey: -1774526813490
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "nomeArea": "string"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7063/api/Area/220f43bf-7631-443a-a09f-6a5fefd1e1fe
+        name: Obter por id
+        meta:
+          id: req_14535bf11176477f9be4d1a230f727c2
+          created: 1774954999483
+          modified: 1779710503346
+          isPrivate: false
+          description: ""
+          sortKey: -1774954999483
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7063/api/Area/{guid}
+        name: Atualizar
+        meta:
+          id: req_481fd3c8fe4f405f8c7093affe3a66c2
+          created: 1774955056984
+          modified: 1779710556826
+          isPrivate: false
+          description: ""
+          sortKey: -1774526813390
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "nomeArea": "string"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Localização
+    meta:
+      id: fld_842347c8e5e9470c9352a11444643a3b
+      created: 1774955959117
+      modified: 1774957262682
+      sortKey: -1774955310577.3281
+      description: ""
+    children:
+      - url: https://localhost:7063/api/Localizacao
+        name: Listar
+        meta:
+          id: req_12de24898e3a4b3593f4f19f32101ccc
+          created: 1774955978722
+          modified: 1779716288162
+          isPrivate: false
+          description: ""
+          sortKey: -1774955918882.5
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6ImZkMzc2Yjg2LWE2ZGQtNDYzYi1hYzk3LTY3NzNhNDFlZjViNiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6ImFAYS5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJDb29yZGVuYWRvciIsIk5JRiI6IjEyMzQ1NjciLCJleHAiOjE3Nzk3MjMxOTksImlzcyI6Ikdlc3Rhb1BhdHJpbW9uaW9zQVBJIiwiYXVkIjoiR2VzdGFvUGF0cmltb25pb3NBUEkifQ.c3XrOy01yZ5HEjs6gJQX8SrkLgGxfdOmtBE4-ZlerFo
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7063/api/Localizacao
+        name: Adicionar
+        meta:
+          id: req_db7473eb35a7432998043dace15ca897
+          created: 1774956008854
+          modified: 1779716308690
+          isPrivate: false
+          description: ""
+          sortKey: -1774955918782.5
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "nomeLocal": "string",
+              "localSAP": 0,
+              "descricaoSAP": "string",
+              "areaId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6ImZkMzc2Yjg2LWE2ZGQtNDYzYi1hYzk3LTY3NzNhNDFlZjViNiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6ImFAYS5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJDb29yZGVuYWRvciIsIk5JRiI6IjEyMzQ1NjciLCJleHAiOjE3Nzk3MjMxOTksImlzcyI6Ikdlc3Rhb1BhdHJpbW9uaW9zQVBJIiwiYXVkIjoiR2VzdGFvUGF0cmltb25pb3NBUEkifQ.c3XrOy01yZ5HEjs6gJQX8SrkLgGxfdOmtBE4-ZlerFo
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7063/api/Localizacao/{guid}
+        name: Atualizar
+        meta:
+          id: req_cd9b9574d42a47bbb93b0275482ae324
+          created: 1774956062321
+          modified: 1779716316420
+          isPrivate: false
+          description: ""
+          sortKey: -1774955885122.25
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "nomeLocal": "string",
+              "localSAP": 0,
+              "descricaoSAP": "string",
+              "areaId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6ImZkMzc2Yjg2LWE2ZGQtNDYzYi1hYzk3LTY3NzNhNDFlZjViNiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6ImFAYS5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJDb29yZGVuYWRvciIsIk5JRiI6IjEyMzQ1NjciLCJleHAiOjE3Nzk3MjMxOTksImlzcyI6Ikdlc3Rhb1BhdHJpbW9uaW9zQVBJIiwiYXVkIjoiR2VzdGFvUGF0cmltb25pb3NBUEkifQ.c3XrOy01yZ5HEjs6gJQX8SrkLgGxfdOmtBE4-ZlerFo
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7063/api/Localizacao/{guid}
+        name: Obter por id
+        meta:
+          id: req_745f9af785364293ba0eebad21d34bc6
+          created: 1774956136127
+          modified: 1779716293393
+          isPrivate: false
+          description: ""
+          sortKey: -1774955918832.5
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6ImZkMzc2Yjg2LWE2ZGQtNDYzYi1hYzk3LTY3NzNhNDFlZjViNiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6ImFAYS5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJDb29yZGVuYWRvciIsIk5JRiI6IjEyMzQ1NjciLCJleHAiOjE3Nzk3MjMxOTksImlzcyI6Ikdlc3Rhb1BhdHJpbW9uaW9zQVBJIiwiYXVkIjoiR2VzdGFvUGF0cmltb25pb3NBUEkifQ.c3XrOy01yZ5HEjs6gJQX8SrkLgGxfdOmtBE4-ZlerFo
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7063/api/Localizacao/{nome}
+        name: Obter por nome
+        meta:
+          id: req_43c4a195c15e45a7b6b1007d81bc310e
+          created: 1774956157993
+          modified: 1779716302455
+          isPrivate: false
+          description: ""
+          sortKey: -1774955918807.5
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6ImZkMzc2Yjg2LWE2ZGQtNDYzYi1hYzk3LTY3NzNhNDFlZjViNiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6ImFAYS5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJDb29yZGVuYWRvciIsIk5JRiI6IjEyMzQ1NjciLCJleHAiOjE3Nzk3MjMxOTksImlzcyI6Ikdlc3Rhb1BhdHJpbW9uaW9zQVBJIiwiYXVkIjoiR2VzdGFvUGF0cmltb25pb3NBUEkifQ.c3XrOy01yZ5HEjs6gJQX8SrkLgGxfdOmtBE4-ZlerFo
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Tipo usuario
+    meta:
+      id: fld_fc61cecef75c47aa8499b670bda6341c
+      created: 1774957246319
+      modified: 1774957258984
+      sortKey: -1774955310576.9375
+      description: ""
+    children:
+      - url: https://localhost:7063/api/TipoUsuario
+        name: Listar
+        meta:
+          id: req_b7f030b3626649feba5872f6600ffd20
+          created: 1774957269379
+          modified: 1779715308279
+          isPrivate: false
+          description: ""
+          sortKey: -1774956823160.9375
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7063/api/TipoUsuario
+        name: Adicionar
+        meta:
+          id: req_f0ff2f3ea9c14b318f3b518c6d9d56c1
+          created: 1774957375207
+          modified: 1779710643756
+          isPrivate: false
+          description: ""
+          sortKey: -1774956642305.25
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "nome": "string"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7063/api/TipoUsuario/{guid}
+        name: Obter por id
+        meta:
+          id: req_10dddd81e15d473f86edefc7e06a0edd
+          created: 1774957494646
+          modified: 1779710634628
+          isPrivate: false
+          description: ""
+          sortKey: -1774956732733.0938
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7063/api/TipoUsuario/{nome}
+        name: Obter por nome
+        meta:
+          id: req_464f1a8e8ae944619dafcb0c787bcab6
+          created: 1774957512681
+          modified: 1779710639751
+          isPrivate: false
+          description: ""
+          sortKey: -1774956687519.1719
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7063/api/TipoUsuario/{id}
+        name: Atualizar
+        meta:
+          id: req_e54e13152d6f4d4e8b4240b834994583
+          created: 1774957527085
+          modified: 1779715168272
+          isPrivate: false
+          description: ""
+          sortKey: -1774956280593.875
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "nome": "string"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Usuario
+    meta:
+      id: fld_3ddc4aa756a44794bfb287cde5a00232
+      created: 1779714648746
+      modified: 1779716275019
+      sortKey: -1774955310609.164
+      description: ""
+    children:
+      - url: https://localhost:7063/api/Usuario
+        name: Listar
+        meta:
+          id: req_1519d035fa6a47a3b86f4905a62dbe5b
+          created: 1779714669395
+          modified: 1779716184453
+          isPrivate: false
+          description: ""
+          sortKey: -1779714671793
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6ImZkMzc2Yjg2LWE2ZGQtNDYzYi1hYzk3LTY3NzNhNDFlZjViNiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6ImFAYS5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJDb29yZGVuYWRvciIsIk5JRiI6IjEyMzQ1NjciLCJleHAiOjE3Nzk3MjMxOTksImlzcyI6Ikdlc3Rhb1BhdHJpbW9uaW9zQVBJIiwiYXVkIjoiR2VzdGFvUGF0cmltb25pb3NBUEkifQ.c3XrOy01yZ5HEjs6gJQX8SrkLgGxfdOmtBE4-ZlerFo
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7063/api/Usuario
+        name: Adicionar
+        meta:
+          id: req_13d1062bc7be468f9349aa29fc65e31d
+          created: 1779714711331
+          modified: 1779716200880
+          isPrivate: false
+          description: ""
+          sortKey: -1777335747476.9688
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "nif": "string",
+              "nome": "string",
+              "rg": "string",
+              "cpf": "string",
+              "carteiraTrabalho": "string",
+              "email": "string",
+              "cargoID": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+              "tipoUsuarioID": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+              "logradouro": "string",
+              "numero": 0,
+              "complemento": "string",
+              "cep": "string",
+              "nomeBairro": "string",
+              "nomeCidade": "string",
+              "estado": "string"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6ImZkMzc2Yjg2LWE2ZGQtNDYzYi1hYzk3LTY3NzNhNDFlZjViNiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6ImFAYS5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJDb29yZGVuYWRvciIsIk5JRiI6IjEyMzQ1NjciLCJleHAiOjE3Nzk3MjMxOTksImlzcyI6Ikdlc3Rhb1BhdHJpbW9uaW9zQVBJIiwiYXVkIjoiR2VzdGFvUGF0cmltb25pb3NBUEkifQ.c3XrOy01yZ5HEjs6gJQX8SrkLgGxfdOmtBE4-ZlerFo
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7063/api/Usuario/fd376b86-a6dd-463b-ac97-6773a41ef5b6
+        name: Obter por Id
+        meta:
+          id: req_e3ff56c6f0f241948d9de6d581a64c41
+          created: 1779714739537
+          modified: 1779716256814
+          isPrivate: false
+          description: ""
+          sortKey: -1778525209634.9844
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6ImZkMzc2Yjg2LWE2ZGQtNDYzYi1hYzk3LTY3NzNhNDFlZjViNiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6ImFAYS5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJDb29yZGVuYWRvciIsIk5JRiI6IjEyMzQ1NjciLCJleHAiOjE3Nzk3MjMxOTksImlzcyI6Ikdlc3Rhb1BhdHJpbW9uaW9zQVBJIiwiYXVkIjoiR2VzdGFvUGF0cmltb25pb3NBUEkifQ.c3XrOy01yZ5HEjs6gJQX8SrkLgGxfdOmtBE4-ZlerFo
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7063/api/Usuario/fd376b86-a6dd-463b-ac97-6773a41ef5b6
+        name: Atualizar
+        meta:
+          id: req_307d32552dc94502b73806ea08290693
+          created: 1779714770724
+          modified: 1779716247475
+          isPrivate: false
+          description: ""
+          sortKey: -1777930478555.9766
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "nif": "string",
+              "nome": "string",
+              "rg": "string",
+              "cpf": "string",
+              "carteiraTrabalho": "string",
+              "email": "string",
+              "cargoID": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+              "tipoUsuarioID": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+              "logradouro": "string",
+              "numero": 0,
+              "complemento": "string",
+              "cep": "string",
+              "nomeBairro": "string",
+              "nomeCidade": "string",
+              "estado": "string"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6ImZkMzc2Yjg2LWE2ZGQtNDYzYi1hYzk3LTY3NzNhNDFlZjViNiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6ImFAYS5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJDb29yZGVuYWRvciIsIk5JRiI6IjEyMzQ1NjciLCJleHAiOjE3Nzk3MjMxOTksImlzcyI6Ikdlc3Rhb1BhdHJpbW9uaW9zQVBJIiwiYXVkIjoiR2VzdGFvUGF0cmltb25pb3NBUEkifQ.c3XrOy01yZ5HEjs6gJQX8SrkLgGxfdOmtBE4-ZlerFo
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7063/api/Usuario/{id}/status
+        name: Aterar status usuario
+        meta:
+          id: req_2d91c7093ed945c7857bc7b48e85ca8e
+          created: 1779714807411
+          modified: 1779716205130
+          isPrivate: false
+          description: ""
+          sortKey: -1776146285318.9531
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "ativo": true
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6ImZkMzc2Yjg2LWE2ZGQtNDYzYi1hYzk3LTY3NzNhNDFlZjViNiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6ImFAYS5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJDb29yZGVuYWRvciIsIk5JRiI6IjEyMzQ1NjciLCJleHAiOjE3Nzk3MjMxOTksImlzcyI6Ikdlc3Rhb1BhdHJpbW9uaW9zQVBJIiwiYXVkIjoiR2VzdGFvUGF0cmltb25pb3NBUEkifQ.c3XrOy01yZ5HEjs6gJQX8SrkLgGxfdOmtBE4-ZlerFo
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Tipo alteração
+    meta:
+      id: fld_98d67bb93bd24954bf44533b1cf3928e
+      created: 1779715066088
+      modified: 1779715066088
+      sortKey: -1774189521289.9688
+      description: ""
+    children:
+      - url: https://localhost:7063/api/TipoAlteracao/{id}
+        name: Atualizar
+        meta:
+          id: req_0e547d613e504846924fd87ce973eed2
+          created: 1779715066088
+          modified: 1779716347440
+          isPrivate: false
+          description: ""
+          sortKey: -1774956280593.875
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "nomeTipo": "string"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6ImZkMzc2Yjg2LWE2ZGQtNDYzYi1hYzk3LTY3NzNhNDFlZjViNiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6ImFAYS5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJDb29yZGVuYWRvciIsIk5JRiI6IjEyMzQ1NjciLCJleHAiOjE3Nzk3MjMxOTksImlzcyI6Ikdlc3Rhb1BhdHJpbW9uaW9zQVBJIiwiYXVkIjoiR2VzdGFvUGF0cmltb25pb3NBUEkifQ.c3XrOy01yZ5HEjs6gJQX8SrkLgGxfdOmtBE4-ZlerFo
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7063/api/TipoAlteracao
+        name: Listar
+        meta:
+          id: req_49b5d38b1a024858a736631dcca5f7ce
+          created: 1779715066088
+          modified: 1779716328467
+          isPrivate: false
+          description: ""
+          sortKey: -1774956823160.9375
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6ImZkMzc2Yjg2LWE2ZGQtNDYzYi1hYzk3LTY3NzNhNDFlZjViNiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6ImFAYS5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJDb29yZGVuYWRvciIsIk5JRiI6IjEyMzQ1NjciLCJleHAiOjE3Nzk3MjMxOTksImlzcyI6Ikdlc3Rhb1BhdHJpbW9uaW9zQVBJIiwiYXVkIjoiR2VzdGFvUGF0cmltb25pb3NBUEkifQ.c3XrOy01yZ5HEjs6gJQX8SrkLgGxfdOmtBE4-ZlerFo
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7063/api/TipoAlteracao/{nome}
+        name: Obter por nome
+        meta:
+          id: req_89b54e0050284daaac972dc105554df9
+          created: 1779715066088
+          modified: 1779716338055
+          isPrivate: false
+          description: ""
+          sortKey: -1774956687519.1719
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6ImZkMzc2Yjg2LWE2ZGQtNDYzYi1hYzk3LTY3NzNhNDFlZjViNiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6ImFAYS5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJDb29yZGVuYWRvciIsIk5JRiI6IjEyMzQ1NjciLCJleHAiOjE3Nzk3MjMxOTksImlzcyI6Ikdlc3Rhb1BhdHJpbW9uaW9zQVBJIiwiYXVkIjoiR2VzdGFvUGF0cmltb25pb3NBUEkifQ.c3XrOy01yZ5HEjs6gJQX8SrkLgGxfdOmtBE4-ZlerFo
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7063/api/TipoAlteracao
+        name: Adicionar
+        meta:
+          id: req_ae9c519de8c4489684b6931ad5cec7ef
+          created: 1779715066088
+          modified: 1779716343106
+          isPrivate: false
+          description: ""
+          sortKey: -1774956642305.25
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "nomeTipo": "string"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6ImZkMzc2Yjg2LWE2ZGQtNDYzYi1hYzk3LTY3NzNhNDFlZjViNiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6ImFAYS5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJDb29yZGVuYWRvciIsIk5JRiI6IjEyMzQ1NjciLCJleHAiOjE3Nzk3MjMxOTksImlzcyI6Ikdlc3Rhb1BhdHJpbW9uaW9zQVBJIiwiYXVkIjoiR2VzdGFvUGF0cmltb25pb3NBUEkifQ.c3XrOy01yZ5HEjs6gJQX8SrkLgGxfdOmtBE4-ZlerFo
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7063/api/TipoAlteracao/{guid}
+        name: Obter por id
+        meta:
+          id: req_b6e65ffbfdf04aa5854e96eef45f19d0
+          created: 1779715066088
+          modified: 1779716333135
+          isPrivate: false
+          description: ""
+          sortKey: -1774956732733.0938
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6ImZkMzc2Yjg2LWE2ZGQtNDYzYi1hYzk3LTY3NzNhNDFlZjViNiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6ImFAYS5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJDb29yZGVuYWRvciIsIk5JRiI6IjEyMzQ1NjciLCJleHAiOjE3Nzk3MjMxOTksImlzcyI6Ikdlc3Rhb1BhdHJpbW9uaW9zQVBJIiwiYXVkIjoiR2VzdGFvUGF0cmltb25pb3NBUEkifQ.c3XrOy01yZ5HEjs6gJQX8SrkLgGxfdOmtBE4-ZlerFo
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Status transferencia
+    meta:
+      id: fld_4f7e7782204a4e2c9f89fcacb5730659
+      created: 1779715232421
+      modified: 1779715232421
+      sortKey: -1779715232421
+      description: ""
+    children:
+      - url: https://localhost:7063/api/SolicitacaoTransferencia
+        name: Listar
+        meta:
+          id: req_d6b64ca53fb44e6f93511dde7fb1af04
+          created: 1779715237033
+          modified: 1779716129980
+          isPrivate: false
+          description: ""
+          sortKey: -1779715240081
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6ImZkMzc2Yjg2LWE2ZGQtNDYzYi1hYzk3LTY3NzNhNDFlZjViNiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6ImFAYS5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJDb29yZGVuYWRvciIsIk5JRiI6IjEyMzQ1NjciLCJleHAiOjE3Nzk3MjMxOTksImlzcyI6Ikdlc3Rhb1BhdHJpbW9uaW9zQVBJIiwiYXVkIjoiR2VzdGFvUGF0cmltb25pb3NBUEkifQ.c3XrOy01yZ5HEjs6gJQX8SrkLgGxfdOmtBE4-ZlerFo
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7063/api/SolicitacaoTransferencia/id
+        name: Obter por Id
+        meta:
+          id: req_6bcc4292d9274a5e811a738fdebf0bb3
+          created: 1779715360796
+          modified: 1779716138515
+          isPrivate: false
+          description: ""
+          sortKey: -1779714955937
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6ImZkMzc2Yjg2LWE2ZGQtNDYzYi1hYzk3LTY3NzNhNDFlZjViNiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6ImFAYS5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJDb29yZGVuYWRvciIsIk5JRiI6IjEyMzQ1NjciLCJleHAiOjE3Nzk3MjMxOTksImlzcyI6Ikdlc3Rhb1BhdHJpbW9uaW9zQVBJIiwiYXVkIjoiR2VzdGFvUGF0cmltb25pb3NBUEkifQ.c3XrOy01yZ5HEjs6gJQX8SrkLgGxfdOmtBE4-ZlerFo
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7063/api/SolicitacaoTransferencia/id
+        name: Adicionar
+        meta:
+          id: req_d0068bf0eb95421cbc1c2cba0ac8b890
+          created: 1779715383354
+          modified: 1779716143427
+          isPrivate: false
+          description: ""
+          sortKey: -1779714813865
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "justificativa": "string",
+              "patrimonioID": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+              "localizacaoID": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6ImZkMzc2Yjg2LWE2ZGQtNDYzYi1hYzk3LTY3NzNhNDFlZjViNiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6ImFAYS5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJDb29yZGVuYWRvciIsIk5JRiI6IjEyMzQ1NjciLCJleHAiOjE3Nzk3MjMxOTksImlzcyI6Ikdlc3Rhb1BhdHJpbW9uaW9zQVBJIiwiYXVkIjoiR2VzdGFvUGF0cmltb25pb3NBUEkifQ.c3XrOy01yZ5HEjs6gJQX8SrkLgGxfdOmtBE4-ZlerFo
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7063/api/SolicitacaoTransferencia/{id}/responder
+        name: Atualizar status transferencia
+        meta:
+          id: req_64b7886ad7cc4297be3a78fed40144a2
+          created: 1779715416503
+          modified: 1779716147479
+          isPrivate: false
+          description: ""
+          sortKey: -1779714742829
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "aprovado": true
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6ImZkMzc2Yjg2LWE2ZGQtNDYzYi1hYzk3LTY3NzNhNDFlZjViNiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6ImFAYS5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJDb29yZGVuYWRvciIsIk5JRiI6IjEyMzQ1NjciLCJleHAiOjE3Nzk3MjMxOTksImlzcyI6Ikdlc3Rhb1BhdHJpbW9uaW9zQVBJIiwiYXVkIjoiR2VzdGFvUGF0cmltb25pb3NBUEkifQ.c3XrOy01yZ5HEjs6gJQX8SrkLgGxfdOmtBE4-ZlerFo
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Status patrimonio
+    meta:
+      id: fld_27fea995244f4f84b1ea1a086b56cc83
+      created: 1779715460131
+      modified: 1779715460131
+      sortKey: -1777335271531
+      description: ""
+    children:
+      - url: https://localhost:7063/api/StatusPatrimonio
+        name: Listar
+        meta:
+          id: req_06ba064dde91458bbf59379614818f8e
+          created: 1779715460131
+          modified: 1779715473505
+          isPrivate: false
+          description: ""
+          sortKey: -1779715240081
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7063/api/StatusPatrimonio/{id}/responder
+        name: Atualizar
+        meta:
+          id: req_256d385e95ee43618de7cc054725b894
+          created: 1779715460131
+          modified: 1779715563133
+          isPrivate: false
+          description: ""
+          sortKey: -1779714742829
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "nomeStatus": "string"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7063/api/StatusPatrimonio/id
+        name: Adicionar
+        meta:
+          id: req_6ac448951a774978a84f1106186b81c8
+          created: 1779715460131
+          modified: 1779715517993
+          isPrivate: false
+          description: ""
+          sortKey: -1779714813865
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "justificativa": "string",
+              "patrimonioID": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+              "localizacaoID": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7063/api/StatusPatrimonio/id
+        name: Obter por Id
+        meta:
+          id: req_a98638e951f848188d24ee605a68e4f2
+          created: 1779715460131
+          modified: 1779715480742
+          isPrivate: false
+          description: ""
+          sortKey: -1779714955937
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Log patrimonio
+    meta:
+      id: fld_0b260f2c30ea48ffa766647f9fec1e4f
+      created: 1779715595446
+      modified: 1779715595446
+      sortKey: -1779715595446
+      description: ""
+    children:
+      - url: https://localhost:7063/api/LogPatrimonio
+        name: Listar
+        meta:
+          id: req_eae230e5e1de41879df0f54390c0fea3
+          created: 1779715607928
+          modified: 1779715633693
+          isPrivate: false
+          description: ""
+          sortKey: -1779715612073
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7063/api/LogPatrimonio/{id}
+        name: Obter por Id
+        meta:
+          id: req_cdf938d3de2d4f4b9e96965f080894b6
+          created: 1779715652717
+          modified: 1779715658896
+          isPrivate: false
+          description: ""
+          sortKey: -1779715426077
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Patrimonio
+    meta:
+      id: fld_a107bb99eac9494fa3a99e63dd9945e9
+      created: 1779715679025
+      modified: 1779715679025
+      sortKey: -1779715679025
+      description: ""
+    children:
+      - url: https://localhost:7063/api/Patrimonio
+        name: Listar
+        meta:
+          id: req_fa877e60810540d68018e5b4a5717802
+          created: 1779715688094
+          modified: 1779716054697
+          isPrivate: false
+          description: ""
+          sortKey: -1779715693108
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6ImZkMzc2Yjg2LWE2ZGQtNDYzYi1hYzk3LTY3NzNhNDFlZjViNiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6ImFAYS5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJDb29yZGVuYWRvciIsIk5JRiI6IjEyMzQ1NjciLCJleHAiOjE3Nzk3MjMxOTksImlzcyI6Ikdlc3Rhb1BhdHJpbW9uaW9zQVBJIiwiYXVkIjoiR2VzdGFvUGF0cmltb25pb3NBUEkifQ.c3XrOy01yZ5HEjs6gJQX8SrkLgGxfdOmtBE4-ZlerFo
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7063/api/Patrimonio/0f6e5400-c52a-4756-8ce1-0ca55ad8dfdb
+        name: Obter por Id
+        meta:
+          id: req_dfcc587d6f2c4b8c8a6dadd85328701c
+          created: 1779715751995
+          modified: 1779716097339
+          isPrivate: false
+          description: ""
+          sortKey: -1779715652590.5
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6ImZkMzc2Yjg2LWE2ZGQtNDYzYi1hYzk3LTY3NzNhNDFlZjViNiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6ImFAYS5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJDb29yZGVuYWRvciIsIk5JRiI6IjEyMzQ1NjciLCJleHAiOjE3Nzk3MjMxOTksImlzcyI6Ikdlc3Rhb1BhdHJpbW9uaW9zQVBJIiwiYXVkIjoiR2VzdGFvUGF0cmltb25pb3NBUEkifQ.c3XrOy01yZ5HEjs6gJQX8SrkLgGxfdOmtBE4-ZlerFo
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7063/api/Patrimonio/importar-csv
+        name: Adicionar
+        meta:
+          id: req_5e660dc10a5c4cd1ba10f10e60c1494f
+          created: 1779715774992
+          modified: 1779716109277
+          isPrivate: false
+          description: ""
+          sortKey: -1779715632331.75
+        method: POST
+        body:
+          mimeType: application/octet-stream
+          fileName: ""
+        headers:
+          - name: Content-Type
+            value: application/octet-stream
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6ImZkMzc2Yjg2LWE2ZGQtNDYzYi1hYzk3LTY3NzNhNDFlZjViNiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6ImFAYS5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJDb29yZGVuYWRvciIsIk5JRiI6IjEyMzQ1NjciLCJleHAiOjE3Nzk3MjMxOTksImlzcyI6Ikdlc3Rhb1BhdHJpbW9uaW9zQVBJIiwiYXVkIjoiR2VzdGFvUGF0cmltb25pb3NBUEkifQ.c3XrOy01yZ5HEjs6gJQX8SrkLgGxfdOmtBE4-ZlerFo
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7063/api/Patrimonio/0f6e5400-c52a-4756-8ce1-0ca55ad8dfdb/status
+        name: Atualizar status patrimonio
+        meta:
+          id: req_462b7a7f1b0548baaccf447b1eb6b869
+          created: 1779715855115
+          modified: 1779716115935
+          isPrivate: false
+          description: ""
+          sortKey: -1779715672849.25
+        method: GET
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "statusPatrimonioID": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6ImZkMzc2Yjg2LWE2ZGQtNDYzYi1hYzk3LTY3NzNhNDFlZjViNiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6ImFAYS5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJDb29yZGVuYWRvciIsIk5JRiI6IjEyMzQ1NjciLCJleHAiOjE3Nzk3MjMxOTksImlzcyI6Ikdlc3Rhb1BhdHJpbW9uaW9zQVBJIiwiYXVkIjoiR2VzdGFvUGF0cmltb25pb3NBUEkifQ.c3XrOy01yZ5HEjs6gJQX8SrkLgGxfdOmtBE4-ZlerFo
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Autenticacao
+    meta:
+      id: fld_3e1b481d4a804f0d926a08b6e94b03df
+      created: 1779715896408
+      modified: 1779715896408
+      sortKey: -1779715896408
+      description: ""
+    children:
+      - url: https://localhost:7063/api/Autenticacao/login
+        name: Autenticar
+        meta:
+          id: req_ab07543c866f47759c73cf2fe9589e17
+          created: 1779715899223
+          modified: 1779715997888
+          isPrivate: false
+          description: ""
+          sortKey: -1779715929978
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "nif": "1234567",
+              "senha": "1234"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://localhost:7063/api/Autenticacao/trocar-senha
+        name: Trocar senha
+        meta:
+          id: req_06487fe38ae643c6b760ff8a4c0649f5
+          created: 1779715950802
+          modified: 1779715985062
+          isPrivate: false
+          description: ""
+          sortKey: -1779715950802
+        method: PATCH
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_42a73b91b4a0469f8d3bd24c9b63df07
+    created: 1774526664872
+    modified: 1774526664872
+environments:
+  name: Base Environment
+  meta:
+    id: env_e0ec4cae905242e9813ad7bc6d16c104
+    created: 1774526664869
+    modified: 1774526664869
+    isPrivate: false
