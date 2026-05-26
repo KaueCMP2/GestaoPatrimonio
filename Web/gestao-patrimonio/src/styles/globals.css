@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.layout_guide {
+  width: min(88%, 1120px);
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  background-color: var(--fundo);
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+
+:root {
+  --vermelho: #cf2929;
+  --fundo: #eef1f5;
+  --texto: #111111;
+  --cinza-texto: #444444;
+}
