@@ -1,7 +1,30 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from '@/pages/login/login.module.css'
+import { fazerLogin } from '../api/authService';
+import { toast } from 'react-toastify';
+import { Router, useRouter } from 'next/router';
 
 const login = () => {
+  const [NIF, setNIF] = useState<string>("");
+  const [senha, setSenha] = useState<string>("");
+
+  const notificacao = (msg: string) => toast.success(msg)
+  const erro = (msg: string) => toast.error(msg)
+  const router = useRouter();
+
+  async function autenticar() {
+    try {
+      await fazerLogin(NIF, senha)
+      notificacao("Login realizado com sucesso!")
+
+      setTimeout(() => {
+        router.push("/patrimonios-sala")
+      }, 2000)
+    } catch (error: any) {
+      erro(error.message)
+    }
+  }
+
   return (
     <main className={styles.login_page}>
       <section className={styles.login_banner} aria-label="Apresentação do sistema">
@@ -25,7 +48,7 @@ const login = () => {
         </div>
       </section>
       <section className={styles.login_area} aria-label="Formulário de login">
-        <form className={styles.login_form}>
+        <form className={styles.login_form} >
           <h1>Login</h1>
           <div className={styles.form_group}>
             <label htmlFor="nif">NIF:</label>
@@ -34,6 +57,10 @@ const login = () => {
               id="nif"
               name="nif"
               placeholder="Insira o seu NIF"
+              required value={NIF}
+              onChange={(e) => {
+                setNIF(e.target.value)
+              }}
             />
           </div>
           <div className={styles.form_group}>
@@ -44,6 +71,9 @@ const login = () => {
                 id="senha"
                 name="senha"
                 placeholder="Insira a sua senha"
+                required
+                value={senha}
+                onChange={(e) => setSenha(e.target.value)}
               />
               <button
                 type="button"
@@ -54,7 +84,10 @@ const login = () => {
               </button>
             </div>
           </div>
-          <button type="submit" className={styles.login_button}>
+          <button type="submit" className={styles.login_button} onClick={(e) => {
+            e.preventDefault();
+            autenticar();
+          }}>
             Entrar
           </button>
         </form>
