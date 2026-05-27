@@ -29,18 +29,19 @@ namespace GestaoPatrimonios.Applications.Services
         {
             Usuario usuario = _repository.ObterPorNIFComTipoUsuario(loginDto.NIF);
 
-            if(usuario == null)
+            if (usuario == null)
             {
-                throw new DomainException("NIF ou senha inválidos.");
+                throw new DomainException(" Usuario ... NIF ou senha inválidos.");
             }
 
-            if(usuario.Ativo == false)
+            if (usuario.Ativo == false)
             {
                 throw new DomainException("Usuário inativo.");
             }
 
-            if(!VerificarSenha(loginDto.Senha, usuario.Senha)) {
-                throw new DomainException("NIF ou senha inválidos.");
+            if (!VerificarSenha(loginDto.Senha, usuario.Senha))
+            {
+                throw new DomainException("222... 1111;... NIF ou senha inválidos.");
             }
 
             string token = _tokenJwt.GerarToken(usuario);
@@ -67,12 +68,12 @@ namespace GestaoPatrimonios.Applications.Services
                 throw new DomainException("Usuário não encontrado");
             }
 
-            if(!VerificarSenha(dto.SenhaAtual, usuario.Senha))
+            if (!VerificarSenha(dto.SenhaAtual, usuario.Senha))
             {
                 throw new DomainException("Senha atual inválida.");
             }
 
-            if(dto.SenhaAtual == dto.NovaSenha)
+            if (dto.SenhaAtual == dto.NovaSenha)
             {
                 throw new DomainException("A nova senha deve ser diferente da senha atual.");
             }
