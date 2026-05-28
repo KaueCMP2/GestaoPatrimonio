@@ -17,7 +17,6 @@ const Header = () => {
     async function decodToken(){
         const tokendecoded = await carregarUsuario();
         setUser(tokendecoded);
-
     }
     
     // console.log(user?.name)

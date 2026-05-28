@@ -18,7 +18,7 @@ const login = () => {
       notificacao("Login realizado com sucesso!")
 
       setTimeout(() => {
-        router.push("/patrimonios-sala")
+        router.push("/patrimonios")
       }, 2000)
     } catch (error: any) {
       erro(error.message)

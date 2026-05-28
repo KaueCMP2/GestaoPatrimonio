@@ -1,8 +1,9 @@
 import React from 'react'
-import styles from '@/pages/patrimonios-sala/patrimonios.module.css'
+import styles from '@/pages/patrimonios/patrimonios.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRightArrowLeft, faCircleInfo, faSliders } from '@fortawesome/free-solid-svg-icons'
 import Header from '@/components/Header/Header'
+import ItemPatrimonio from '@/components/ItemPatrimonio/ItemPatrimonio'
 
 const index = () => {
     return (
@@ -50,24 +51,7 @@ const index = () => {
                                 <th>Transferir</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>1236808</td>
-                                <td>MESA TRAPEZOIDAL DC-1987a</td>
-                                <td>Mesa</td>
-                                <td>11/02/26</td>
-                                <td>
-                                    <a href="#" aria-label="Ver detalhes do patrimonio">
-                                        <FontAwesomeIcon icon={faCircleInfo} />
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="#" aria-label="Transferir patrimonio">
-                                        <FontAwesomeIcon icon={faArrowRightArrowLeft} />
-                                    </a>
-                                </td>
-                            </tr>
-                        </tbody>
+                        <ItemPatrimonio />
                     </table>
                 </section>
                 <nav className={styles.pagination} aria-label="Paginação">

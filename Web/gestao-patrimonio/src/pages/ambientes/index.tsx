@@ -1,10 +1,31 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from '@/pages/ambientes/ambientes.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleInfo, faSliders } from '@fortawesome/free-solid-svg-icons'
 import Header from '@/components/Header/Header'
+import ItemAmbiente from '@/components/ItemAmbiente/ItemAmbiente'
+import { carregarAmbiente } from '../api/ambiente'
+
+type localRecebido = {
+    localizacaoID: string,
+    nomeLocal: string,
+    responsavel: string[]
+}
 
 const index = () => {
+    const [locais, setLocais] = useState<localRecebido[] | null>(null)
+
+    async function pegarLocais() {
+        const locaisRecebidos = await carregarAmbiente();
+        setLocais(locaisRecebidos!)
+        console.log(carregarAmbiente())
+    }
+
+    useEffect(() => {
+        pegarLocais();
+        console.log(locais)
+    }, [])
+
     return (
         <>
             <Header />
@@ -47,17 +68,13 @@ const index = () => {
                                 <th>Detalhes</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>Sala 30/31 (anfiteatro)</td>
-                                <td>Samanta Melissa</td>
-                                <td>
-                                    <a href="#" aria-label="Ver detalhes da Sala 30/31">
-                                        <FontAwesomeIcon icon={faCircleInfo} />
-                                    </a>
-                                </td>
-                            </tr>
-                        </tbody>
+                        {locais?.length! > 0 ? locais?.map((item) => (
+                            <ItemAmbiente
+                                key={item.localizacaoID}
+                                localizacaoID={item.localizacaoID}
+                                nomeLocal={item.nomeLocal}
+                                responsavel={item.responsavel} />
+                        )) : <p>Carregando locais...</p>}
                     </table>
                 </section>
                 <nav className={styles.pagination} aria-label="Paginação">

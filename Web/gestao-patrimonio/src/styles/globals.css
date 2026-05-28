@@ -10,6 +10,10 @@
   margin: 0 auto;
 }
 
+main {
+  margin-top: 3%;
+}
+
 a {
   text-decoration: none;
   color: inherit;
