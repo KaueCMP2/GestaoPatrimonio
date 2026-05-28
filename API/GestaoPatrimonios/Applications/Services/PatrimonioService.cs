@@ -27,6 +27,7 @@ namespace GestaoPatrimonios.Applications.Services
             {
                 PatrimonioID = patrimonio.PatrimonioID,
                 Denominacao = patrimonio.Denominacao,
+                DataTransferencia = patrimonio.LogPatrimonio.FirstOrDefault().DataTransferencia,
                 NumeroPatrimonio = patrimonio.NumeroPatrimonio,
                 Valor = patrimonio.Valor,
                 Imagem = patrimonio.Imagem,

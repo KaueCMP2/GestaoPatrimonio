@@ -13,8 +13,6 @@ namespace GestaoPatrimonios.Applications.Services
         public LocalizacaoService(ILocalizacaoRepository repository)
         {
             _repository = repository;
-
-
         }
 
         public List<ListarLocalizacaoDto> Listar()
@@ -27,7 +25,8 @@ namespace GestaoPatrimonios.Applications.Services
                 NomeLocal = localizacao.NomeLocal,
                 LocalSAP = localizacao.LocalSAP,
                 DescricaoSAP = localizacao.DescricaoSAP,
-                AreaID = localizacao.AreaID
+                AreaID = localizacao.AreaID,
+                Responsavel = localizacao.Usuario.FirstOrDefault()?.Nome
             }).ToList();
         }
 
