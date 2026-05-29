@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import styles from '@/pages/login/login.module.css'
 import { fazerLogin } from '../api/authService';
 import { toast } from 'react-toastify';
@@ -86,10 +86,10 @@ const login = () => {
                 e.preventDefault;
                 visualizarSenha();
               }}
-              onMouseUp={(e) => {
-                e.preventDefault();
-                setIsPass(true)
-              }}
+                onMouseUp={(e) => {
+                  e.preventDefault();
+                  setIsPass(true)
+                }}
                 type="button"
                 className={styles.show_password}
                 aria-label="Mostrar senha"
