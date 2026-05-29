@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import styles from '@/pages/login/login.module.css'
 import { fazerLogin } from '../api/authService';
 import { toast } from 'react-toastify';
@@ -7,6 +7,13 @@ import { Router, useRouter } from 'next/router';
 const login = () => {
   const [NIF, setNIF] = useState<string>("");
   const [senha, setSenha] = useState<string>("");
+  const [isPass, setIsPass] = useState<boolean>(true)
+
+  const [contador, setCount] = useState<number>(0)
+
+  function visualizarSenha() {
+    setIsPass(!isPass);
+  }
 
   const notificacao = (msg: string) => toast.success(msg)
   const erro = (msg: string) => toast.error(msg)
@@ -67,7 +74,7 @@ const login = () => {
             <label htmlFor="senha">Senha:</label>
             <div className={styles.password_field}>
               <input
-                type="password"
+                type={isPass ? "password" : "text"}
                 id="senha"
                 name="senha"
                 placeholder="Insira a sua senha"
@@ -75,10 +82,18 @@ const login = () => {
                 value={senha}
                 onChange={(e) => setSenha(e.target.value)}
               />
-              <button
+              <button onMouseDown={(e) => {
+                e.preventDefault;
+                visualizarSenha();
+              }}
+              onMouseUp={(e) => {
+                e.preventDefault();
+                setIsPass(true)
+              }}
                 type="button"
                 className={styles.show_password}
                 aria-label="Mostrar senha"
+
               >
                 👁
               </button>
