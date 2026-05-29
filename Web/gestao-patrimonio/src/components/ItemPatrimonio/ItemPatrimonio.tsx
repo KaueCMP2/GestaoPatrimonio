@@ -3,7 +3,7 @@ import { faArrowRightArrowLeft, faCircleInfo } from '@fortawesome/free-solid-svg
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useEffect, useState } from 'react'
 
-type patrimonioRecebido = {
+type patrimonioMolde = {
     patrimonioID: string,
     denominacao: string,
     numeroPatrimonio: string,
@@ -14,25 +14,16 @@ type patrimonioRecebido = {
     statusPatrimonioID: string
 }
 
-const ItemPatrimonio = () => {
-    const [patrimonio, setPatrimonios] = useState<patrimonioRecebido | null>(null)
-    
-    async function letPatrimonio() {
-        const leitura = await carregarPatrimonio();
-        setPatrimonios(leitura) 
-    }
 
-    useEffect(() => {
-        letPatrimonio();
-        console.log(patrimonio);
-    }, [])
+const ItemPatrimonio = (patrimonioRecebido: patrimonioMolde) => {
+    console.log(patrimonioRecebido)
+
     return (
         <tbody>
             <tr>
-                <td>1236808</td>
-                <td>MESA TRAPEZOIDAL DC-1987a</td>
-                <td>Mesa</td>
-                <td>11/02/26</td>
+                <td>{patrimonioRecebido.numeroPatrimonio}</td>
+                <td>{patrimonioRecebido.denominacao}</td>
+                <td>{patrimonioRecebido.dataTransferencia.toString()}</td>
                 <td>
                     <a href="#" aria-label="Ver detalhes do patrimonio">
                         <FontAwesomeIcon icon={faCircleInfo} />
