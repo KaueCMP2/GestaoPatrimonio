@@ -99,7 +99,6 @@
     color: var(--vermelho);
     font-size: 22px;
     font-weight: 700;
-    margin-bottom: 46px;
 }
 
 #titulo_patrimonio {
@@ -206,7 +205,7 @@
 
     .back_link {
         font-size: 18px;
-        margin-bottom: 32px;
+        margin-bottom: 5%;
     }
 
     #titulo_patrimonio {

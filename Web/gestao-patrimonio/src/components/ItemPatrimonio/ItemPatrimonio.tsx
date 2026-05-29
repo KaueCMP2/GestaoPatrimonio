@@ -16,8 +16,6 @@ type patrimonioMolde = {
 
 
 const ItemPatrimonio = (patrimonioRecebido: patrimonioMolde) => {
-    console.log(patrimonioRecebido)
-
     return (
         <tbody>
             <tr>

@@ -1,7 +1,8 @@
-import { carregarPatrimonio } from '@/pages/api/patrimonio';
+import { carregarPatrimonio, pagination } from '@/pages/api/patrimonio';
 import React, { useEffect, useState } from 'react'
 import styles from '@/pages/patrimonios/patrimonios.module.css'
 import ItemPatrimonio from '../ItemPatrimonio/ItemPatrimonio';
+import { useParams } from 'next/navigation';
 
 
 type patrimonioMolde = {
@@ -15,17 +16,18 @@ type patrimonioMolde = {
     valor: number,
 }
 
-const leitura: any = carregarPatrimonio();
-
 export const ListaDePatrimonios = () => {
-    const [patrimonio, setPatrimonios] = useState<patrimonioMolde[] | null>(leitura)
+    const params = useParams();
+    const pagina = params?.pagina;
+    const porPagina = params?.porPagina;
 
-        async function pegarPatrimonios() {
-            const patrimoniosRecebidos = await carregarPatrimonio();
-            setPatrimonios(patrimoniosRecebidos!)
-            console.log(carregarPatrimonio())
-        }
-    
+    const [patrimonio, setPatrimonios] = useState<patrimonioMolde[] | null>([])
+
+    async function pegarPatrimonios() {
+        const patrimoniosRecebidos = await pagination(Number(pagina), Number(porPagina));
+        setPatrimonios(patrimoniosRecebidos!)
+        console.log(carregarPatrimonio())
+    }
 
     useEffect(() => {
         pegarPatrimonios()

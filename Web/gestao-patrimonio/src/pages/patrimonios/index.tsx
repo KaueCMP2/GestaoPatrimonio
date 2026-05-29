@@ -18,7 +18,7 @@ const index = () => {
                     id={styles.page_header}
                     aria-labelledby="titulo-patrimonios"
                 >
-                    <h1 id={styles.titulo_patrimonios}>Patrimônios: Sala 09/10</h1>
+                    <h1 className='h1-margin' id={styles.titulo_patrimonios}>Patrimônios: Sala 09/10</h1>
                     <form className={styles.search_area} role="search">
                         <label htmlFor="pesquisa-ambiente" className={styles.sr_only}>
                             Pesquisar patrimônios

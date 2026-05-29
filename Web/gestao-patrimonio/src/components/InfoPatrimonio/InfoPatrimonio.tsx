@@ -13,7 +13,7 @@ const InfoPatrimono = () => {
                 id={styles.page_detalhes}
                 aria-labelledby="titulo-patrimonio"
             >
-                <Link href="/ambientes" className={styles.back_link}>
+                <Link href="/patrimonios" className={styles.back_link}>
                     <FontAwesomeIcon icon={faArrowLeft} />
                     Voltar
                 </Link>
