@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from '@/pages/patrimonios/patrimonios.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRightArrowLeft, faCircleInfo, faSliders } from '@fortawesome/free-solid-svg-icons'
 import Header from '@/components/Header/Header'
 import ItemPatrimonio from '@/components/ItemPatrimonio/ItemPatrimonio'
+import { carregarPatrimonio } from '../api/patrimonio'
+import { Span } from 'next/dist/trace'
+import { ListaDePatrimonios} from '@/components/ListaPatrimonios/ListaPatrimonios'
 
 const index = () => {
     return (
@@ -35,25 +38,9 @@ const index = () => {
                         </button>
                     </form>
                 </section>
-                <section
-                    className="layout_guide"
-                    id={styles.table_section}
-                    aria-label="Lista de patrimonios"
-                >
-                    <table className={styles.environment_table}>
-                        <thead>
-                            <tr>
-                                <th>Patrimônio</th>
-                                <th>Denominação</th>
-                                <th>Tipo</th>
-                                <th>Data transfêrencia</th>
-                                <th>Detalhes</th>
-                                <th>Transferir</th>
-                            </tr>
-                        </thead>
-                        <ItemPatrimonio />
-                    </table>
-                </section>
+
+                <ListaDePatrimonios />
+               
                 <nav className={styles.pagination} aria-label="Paginação">
                     <button
                         type="button"
