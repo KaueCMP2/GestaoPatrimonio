@@ -1,6 +1,7 @@
 import { carregarPatrimonio } from '@/pages/api/patrimonio'
 import { faArrowRightArrowLeft, faCircleInfo } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 
 type patrimonioMolde = {
@@ -23,14 +24,15 @@ const ItemPatrimonio = (patrimonioRecebido: patrimonioMolde) => {
                 <td>{patrimonioRecebido.denominacao}</td>
                 <td>{patrimonioRecebido.dataTransferencia.toString()}</td>
                 <td>
-                    <a href="#" aria-label="Ver detalhes do patrimonio">
+                    <Link href={"/detalhes-patrimonio/" + patrimonioRecebido.patrimonioID} aria-label="Ver detalhes do patrimonio">
+
                         <FontAwesomeIcon icon={faCircleInfo} />
-                    </a>
+                    </Link>
                 </td>
                 <td>
-                    <a href="#" aria-label="Transferir patrimonio">
+                    <Link href={"/detalhes-patrimonio/" + patrimonioRecebido.patrimonioID} aria-label="Transferir patrimonio">
                         <FontAwesomeIcon icon={faArrowRightArrowLeft} />
-                    </a>
+                    </Link>
                 </td>
             </tr>
         </tbody>)

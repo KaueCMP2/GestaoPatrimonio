@@ -3,6 +3,7 @@ import styles from '@/components/Header/Header.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faChevronDown, faUser } from '@fortawesome/free-solid-svg-icons';
 import { carregarUsuario } from '@/pages/api/authService';
+import Link from 'next/link';
 
 type usuarioRecebido = {
     NIF: string,
@@ -31,20 +32,20 @@ const Header = () => {
     return (
         <header className={styles.topbar}>
             <nav className="layout_guide" id={styles.navbar} aria-label="Menu principal">
-                <a href="#" className={styles.logo_link} aria-label="Página inicial">
+                <Link href="/patrimonios" className={styles.logo_link} aria-label="Página inicial">
                     <img src="../Logo Senai.png" alt="Logo SENAI" className={styles.logo} />
-                </a>
+                </Link>
                 <ul className={styles.menu_list}>
                     <li>
-                        <a href="#" className={styles.menu_link}>
+                        <Link href="/ambientes" className={styles.menu_link}>
                             Ambientes
                             <FontAwesomeIcon icon={faChevronDown} />
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="#" className={styles.menu_link}>
+                        <Link href="/patrimonios" className={styles.menu_link}>
                             Patrimônios
-                        </a>
+                        </Link>
                     </li>
                 </ul>
                 <section className={styles.user_area} aria-label="Informações do usuário">

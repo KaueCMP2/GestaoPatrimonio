@@ -1,5 +1,6 @@
 import { faCircleInfo } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Link from 'next/link'
 import React from 'react'
 
 interface ItemAmbiente {
@@ -15,9 +16,9 @@ const ItemAmbiente = (ambiente : ItemAmbiente) => {
                 <td>{ambiente.nomeLocal}</td>
                 <td>{ambiente.responsavel}</td>
                 <td>
-                    <a href="#" aria-label="Ver detalhes da Sala 30/31">
+                    <Link href={"/detalhes-patrimonio/" + ambiente.localizacaoID} aria-label="Ver detalhes da Sala 30/31">
                         <FontAwesomeIcon icon={faCircleInfo} />
-                    </a>
+                    </Link>
                 </td>
             </tr>
         </tbody>

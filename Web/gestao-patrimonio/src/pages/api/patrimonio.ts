@@ -20,7 +20,14 @@ export async function pagination(pagina?: number, porPagina?: number) {
     const indiceFinal = paginaAtual! * patrimonioPorPagina!;
     const dadosCompletos = dados.splice(indiceInicial!, indiceFinal)
 
-    console.log(paginaAtual, patrimonioPorPagina)
-    console.log(dadosCompletos)
     return dadosCompletos;
+}
+
+export async function obterPatrimonioPorId(id: string) {
+    try {
+        const response = await api.get("Patrimonio/" + id);
+        return response.data
+    } catch (error: any) {
+        throw new Error(error.message);
+    }
 }

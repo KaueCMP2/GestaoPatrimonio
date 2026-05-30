@@ -34,7 +34,6 @@ export async function carregarUsuario() {
         return;
 
     const usuario = jwtDecode(token.toString()) as any;
-    console.log(usuario)
 
     const tokenDecodificado: usuarioRecebido = {
         name : usuario["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name"],
@@ -43,6 +42,5 @@ export async function carregarUsuario() {
         role : usuario["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"]
     }
 
-    console.log(tokenDecodificado)
     return (tokenDecodificado)
 }
